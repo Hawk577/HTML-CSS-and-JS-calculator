@@ -1,0 +1,97 @@
+<html>
+   <head>
+      <title>Calculator</title>
+      <style>
+         *
+         {
+            font-weight: bolder;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+         }
+         body
+         {
+            padding: 0px;
+            margin: 0px;
+            background: linear-gradient(to right, cyan, springgreen);
+         }
+         .grid
+         {
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows:minmax(120px, auto) repeat(5, 100px);
+         }
+          .span-two
+          {
+            grid-column: span 2;
+          }
+          .grid > input
+          {
+            border: 1px;
+            border-style: solid;
+            border-color: white;
+            cursor: pointer;
+            font-size: 2rem;
+            background-color: rgba(255, 255, 2555, 0.75);
+           height: 100px;
+          }
+          .grid > input:hover
+          {
+            background-color: rgba(255, 255, 255, 0.10);
+          }
+          .output > input
+          {
+            cursor: progress;
+            width: 400px;
+            height: 100px;
+            grid-column: 1 / -1;
+            background-color: rgba(0, 0, 0, .75);
+            flex-direction: column;
+            word-wrap: break-word;
+            word-break: break-all;
+            color: white;
+            font-size: 2rem;
+          
+          
+          }
+          
+      </style>
+   </head>
+   <body>
+      <div>
+         <form action="Calculator.html" name="form1" class="calci" method="post">
+            <center>
+            <div class="output">
+          <input type="text" name="answer" id="display" class="answer">
+           </div>
+           </center>
+            <div class="grid">
+            <input type="button" class="span-two" value="AC" onclick=' form1.answer.value=form1.answer.value.substring(0,form1)'"">
+            <input type="button" class="btnDesign" value='DEL'" onclick="form1.answer.value=form1.answer.value.substring(0,form1)"">
+            <input type="button" class="operatorDesign" value="÷" onclick="form1.answer.value+='/'">  
+             <input type="button" class="btnDesign" value="7" onclick="form1.answer.value+=7">
+             <input type="button" class="btnDesign" value="8" onclick="form1.answer.value+='8'">
+             <input type="button" class="btnDesign" value="9" onclick="form1.answer.value+='9'">
+               <input type="button" class="operatorDesign" value="*" 
+               onclick="form1.answer.value+='*'">
+               <input type="button" class="btnDesign" value="4" onclick ="form1.answer.value+=4">
+               <input type="button" class="btnDesign" value="5" onclick ="form1.answer.value+='5'">
+               <input type="button"class="btndesign" value="6" onclick="form1.answer.value+='6'">
+               <input type="button"class="operatorDesign" value="-" onclick ="form1.answer.value+='-'">
+                <input type="button" class="btnDesign" value="1" onclick="form1.answer.value+='1'">
+                <input type="button" class="btndesign" value="2" onclick="form1.answer.value+='2'">
+                <input type="button" class="btnDesign" value="3" onclick="form1.answer.value+='3'">
+                <input type="button"class="operatorDesign" value="+"  onclick="form1.answer.value+='+'">
+                <input type="button" id="zero" class="btndesign" value="0" onclick="form1
+                .answer.value+='0'">
+                <input type="button" class="btndesign" value="." onclick="form1.answer.value+='.'">
+                <input type="button" class="span-two" value="="  onclick="form1.answer.value=eval(form1.answer.value)">
+            </div>
+         </form>
+      </div>
+     
+
+   </body>
+</html>
